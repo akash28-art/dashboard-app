@@ -1,11 +1,11 @@
 const token = localStorage.getItem("token");
 
 async function fetchUsers() {
-  const res = await fetch("http://localhost:5000/users", {
-    headers: {
+  const res = await fetch("https://backend-xxxx.onrender.com/users"),{
+      headers: {
       Authorization: token
     }
-  });
+  };
 
   const users = await res.json();
 
@@ -27,7 +27,7 @@ async function fetchUsers() {
 }
 
 async function addUser() {
-  await fetch("http://localhost:5000/users", {
+  await fetch("https://backend-xxxx.onrender.com/users"), {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
